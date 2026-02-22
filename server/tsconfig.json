@@ -7,7 +7,7 @@
     "outDir": "./dist",
     "types": ["node", "vitest/globals"],
     "resolveJsonModule": true,
-    "module": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "bundler",
   },
   "include": ["src/**/*", "tests/**/*", "../client/src/types/api.ts"],
