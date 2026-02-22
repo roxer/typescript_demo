@@ -26,6 +26,7 @@ docker-compose.yml     # Container orchestration
 
 - Node.js (version 24 or higher)
 - npm or yarn
+- local env - https://github.com/direnv/direnv
 - MongoDB (for local development) or Docker
 
 ## Installation
