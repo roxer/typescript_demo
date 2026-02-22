@@ -3,9 +3,9 @@ import cors from 'cors';
 import * as OpenApiValidator from 'express-openapi-validator';
 import { Server } from 'http';
 import swaggerUi from 'swagger-ui-express';
-import { Database } from './config/database';
-import { createTodoRoutes } from './routes/todoRoutes';
-import apiDocs from './openapi.json';
+import { Database } from './config/database.js';
+import { createTodoRoutes } from './routes/todoRoutes.js';
+import apiDocs from './openapi.json' with { type: "json" };
 
 export class TodoApplication {
   private app: Express;
@@ -70,7 +70,7 @@ export class TodoApplication {
     });
 
     // 404 handler for unmatched routes
-    this.app.use('*', (_req: Request, res: Response) => {
+    this.app.use('*splat', (_req: Request, res: Response) => {
       res.status(404).json({ message: 'not found' });
     });
   }
