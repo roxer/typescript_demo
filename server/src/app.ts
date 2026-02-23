@@ -70,7 +70,7 @@ export class TodoApplication {
     });
 
     // 404 handler for unmatched routes
-    this.app.use("*splat", (_req: Request, res: Response) => {
+    this.app.use("{*splat}", (_req: Request, res: Response) => {
       res.status(404).json({ message: "not found" });
     });
   }
