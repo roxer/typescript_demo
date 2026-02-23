@@ -12,7 +12,7 @@ export type Todo =
     })
   | (TodoBase & {
       status: 'completed';
-      completionMessage: string;
+      completionMessage?: string;
     });
 
 export type InternalUpdateTodoRequest = {

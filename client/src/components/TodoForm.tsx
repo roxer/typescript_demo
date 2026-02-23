@@ -6,9 +6,9 @@ const TodoForm: React.FC = () => {
   const [description, setDescription] = useState('');
   const createTodoMutation = useCreateTodo();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
-    
+
     if (!title.trim()) return;
 
     createTodoMutation.mutate(
@@ -38,7 +38,7 @@ const TodoForm: React.FC = () => {
           required
         />
       </div>
-      
+
       <div className="form-group">
         <textarea
           placeholder="Enter description (optional)..."
@@ -49,15 +49,15 @@ const TodoForm: React.FC = () => {
           rows={3}
         />
       </div>
-      
-      <button 
-        type="submit" 
+
+      <button
+        type="submit"
         className="btn btn-primary"
         disabled={createTodoMutation.isPending || !title.trim()}
       >
         {createTodoMutation.isPending ? 'Adding...' : 'Add Todo'}
       </button>
-      
+
       {createTodoMutation.isError && (
         <div className="error-message">
           Failed to create todo. Please try again.

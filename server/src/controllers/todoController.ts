@@ -21,7 +21,7 @@ export class TodoController {
         id: todo.id,
         title: todo.title,
         completed: true,
-        completionMessage: todo.completionMessage,
+        completionMessage: todo.completionMessage!,
         createdAt: todo.createdAt,
         updatedAt: todo.updatedAt,
       };
