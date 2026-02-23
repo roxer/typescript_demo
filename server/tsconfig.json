@@ -1,9 +1,15 @@
 {
-  "extends": ["@tsconfig/node22/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
+  "extends": [
+    "@tsconfig/node24/tsconfig.json",
+    "@tsconfig/strictest/tsconfig.json",
+  ],
   "compilerOptions": {
     "outDir": "./dist",
     "types": ["node", "vitest/globals"],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "target": "ES2024",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
   },
-  "include": ["src/**/*", "tests/**/*", "../client/src/types/api.ts"]
+  "include": ["src/**/*", "tests/**/*", "../client/src/types/api.ts"],
 }

@@ -19,13 +19,14 @@ client/                # Frontend application
 └── ...               # Other frontend files
 README.md              # This file
 docker-compose.yml     # Container orchestration
-.env.example          # Environment variables template
+.envrc.example          # Environment variables template
 ```
 
 ## Prerequisites
 
-- Node.js (version 18 or higher)
+- Node.js (version 24 or higher)
 - npm or yarn
+- local env - https://github.com/direnv/direnv
 - MongoDB (for local development) or Docker
 
 ## Installation

@@ -1,5 +1,5 @@
 # Simplified Dockerfile - expects pre-built application
-FROM node:22
+FROM node:24
 
 # Create app directory
 WORKDIR /app

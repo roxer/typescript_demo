@@ -1,8 +1,8 @@
 import { err, ok, Result } from 'neverthrow';
-import { Todo, InternalUpdateTodoRequest } from '../types/todo';
-import { CreateTodoRequest } from '../../../client/src/types/api';
-import { TodoRepository } from '../repositories/todoRepository';
-import { AppError } from '../types/errors';
+import { Todo, InternalUpdateTodoRequest } from '../types/todo.js';
+import { CreateTodoRequest } from '../../../client/src/types/api.js';
+import { TodoRepository } from '../repositories/todoRepository.js';
+import { AppError } from '../types/errors.js';
 
 export class TodoService {
   constructor(private todoRepository: TodoRepository) {}
